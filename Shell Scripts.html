@@ -7,7 +7,7 @@
     <title>Shell Script Viewer</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
-   
+
     <style>
         body {
             margin: 0;
@@ -16,7 +16,7 @@
             flex-direction: column;
             height: 100vh;
         }
-    
+
         header {
             position: fixed;
             top: 0;
@@ -24,18 +24,18 @@
             width: 100%;
             z-index: 1000;
         }
-    
+
         header img {
             width: 100%;
             height: auto;
             display: block;
         }
-    
+
         nav {
             position: sticky;
             top: 0;
         }
-    
+
         footer {
             position: flex;
             bottom: 0;
@@ -47,7 +47,7 @@
             padding: 1rem;
             z-index: 1000;
         }
-    
+
         .content {
             flex: 1;
             display: flex;
@@ -55,7 +55,7 @@
             margin-bottom: 60px; /* Space for fixed footer */
             overflow-y: auto;
         }
-    
+
         .script-list {
             width: 20%;
             background-color: #f8f9fa;
@@ -63,31 +63,31 @@
             padding: 1rem;
             overflow-y: auto;
         }
-    
+
         .script-list h5 {
             text-align: center;
         }
-    
+
         .script-list ul {
             list-style-type: none;
             padding: 0;
         }
-    
+
         .script-list li {
             margin: 10px 0;
         }
-    
+
         .script-list a {
             text-decoration: none;
             color: #007bff;
             cursor: pointer;
         }
-    
+
         .script-content {
             flex: 1;
             padding: 2rem;
         }
-    
+
         pre {
             background-color: #f8f9fa;
             padding: 1rem;
@@ -95,7 +95,7 @@
             border: 1px solid #ddd;
         }
     </style>
-    
+
 
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
@@ -122,7 +122,7 @@
                         <li class="nav-item"><a class="nav-link" href="Linux_Ubuntu_Usefull_Commands.html">Linux/Ubuntu Usefull Commands</a></li>
                         <li class="nav-item"><a class="nav-link" href="Documents.html">Documents</a></li>
                         <li class="nav-item"><a class="nav-link" href="Projects.html">Projects</a></li>
-                        
+
                     </ul>
                 </div>
             </div>
@@ -170,7 +170,7 @@
         const scripts = {
             script1: `
 <pre><code>
-# Save the below script with '.sh ' extension and run with required previlages ex: sudo sh ./jenkins.sh 
+# Save the below script with '.sh ' extension and run with required previlages ex: sudo sh ./jenkins.sh
 
  sudo yum update -y
  sudo wget -O /etc/yum.repos.d/jenkins.repo | https://pkg.jenkins.io/redhat-stable/jenkins.repo
@@ -184,13 +184,13 @@
  java --version && systemctl status jenkins
 
 # https://www.jenkins.io/doc/book/installing/
-# ps -ef | grep jenkins 
+# ps -ef | grep jenkins
 </code></pre>
             `,
 
             script2: `
 <pre><code>
-# Save the below script with '.sh ' extension and run with required previlages ex: sudo sh ./sonarsetup.sh 
+# Save the below script with '.sh ' extension and run with required previlages ex: sudo sh ./sonarsetup.sh
 
 sudo yum update -y
 yum whatprovides java
@@ -199,7 +199,7 @@ wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-8.9.10.61
 sudo unzip /tmp/sonarqube-8.9.10.61524.zip -d /opt/
 sudo mv /opt/sonarqube-8.9.10.61524 /opt/sonarqube
 
-sudo vi /etc/sudoers 
+sudo vi /etc/sudoers
 # Add the following line below the root line
 sonar  ALL=(ALL)   NOPASSWD:  ALL
 
@@ -264,7 +264,7 @@ readlink -f $(which java)
 
 /usr/lib/jvm/java-11-openjdk-amd64/bin/java
 
-sudo vim /etc/systemd/system/tomcat.service 
+sudo vim /etc/systemd/system/tomcat.service
 
 <<<<<<<<<<<<<<<<<<<<<<<<<<
 
@@ -338,7 +338,7 @@ tar    -C /destination
 unzip  -d /destination
 </code></pre>
             `,
-        
+
             script4: `
 <pre><code>
 RHEL/CentOS
@@ -357,7 +357,7 @@ sudo yum install git -y
 Ubuntu/Debian
 
 sudo apt update -y
-sudo apt install git -y 
+sudo apt install git -y
 Or
 sudo apt-get install git-all
 
@@ -384,7 +384,7 @@ echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/hashi
 sudo apt update && sudo apt install terraform
 </code></pre>
 
-             
+
              `,
              script6: `
 <pre><code>
@@ -406,7 +406,7 @@ export PATH ''' | sudo tee /etc/profile.d/maven.sh
 sudo chmod -R 775 /etc/profile.d/maven.sh
 source /etc/profile.d/maven.sh
 
-</code></pre>             
+</code></pre>
              `,
              script7:`
 <pre><code>
@@ -419,7 +419,7 @@ sudo wget -O /etc/yum.repos.d/jenkins.repo \
 sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key
 sudo yum upgrade -y
 sudo yum install java-11-openjdk -y
-or 
+or
 sudo yum install java-17-openjdk -y
 sudo yum install jenkins -y
 update-alternatives --config java
@@ -448,7 +448,7 @@ sudo systemctl enable jenkins
 update-alternatives --config java
 sudo systemctl start jenkins
 sudo systemctl status jenkins
-</code></pre> 
+</code></pre>
              `,
              script8:`
 <pre><code>
@@ -500,7 +500,7 @@ sudo wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.98/bin/apache-tomcat-9.0
  sudo systemctl daemon-reload
  sudo systemctl enable tomcat
  sudo systemctl start tomcat
-</code></pre>             
+</code></pre>
              `,
              script9:`
 <pre><code>
@@ -534,7 +534,7 @@ sudo systemctl start docker
 sudo systemctl enable docker
 sudo chmod 666 /var/run/docker.sock
 sudo systemctl restart docker
-</code></pre>             
+</code></pre>
              `,
              script10:`
 <pre><code>
@@ -557,12 +557,12 @@ https://baltocdn.com/helm/stable/debian/ all main" | sudo tee /etc/apt/sources.l
 sudo apt-get update
 sudo apt-get install helm
 
-</code></pre>     
+</code></pre>
 
              `,
              script11:`
 <pre><code>
-Shell Script that retrieves the initial admin password 
+Shell Script that retrieves the initial admin password
 
 # STEP1 :- Save the below script as  "*.sh" format  (Ex: jenkins_password.sh)
 #!/bin/bash
@@ -588,7 +588,7 @@ chmod +x *.sh  (Ex: chmod +x jenkins_password.sh)
 
 sudo ./*.sh  (Ex: sudo sh ./jenkins_password.sh)
 
-</code></pre>      
+</code></pre>
 
              `,
              script12:`
@@ -600,20 +600,20 @@ sudo yum install docker-compose -y
 # Ubuntu
 sudo apt update -y
 sudo apt docker-compose -y
- 
-</code></pre>         
+
+</code></pre>
 
              `,
              script13:`
 <pre><code>
 
-# To connect vm to MySQL Database server 
+# To connect vm to MySQL Database server
 sudo apt install mysql-client-core-8.0 -y
 
 mysql -h (hostname) -u (username) -p
 # ( Ex: mysql -h glpsdb.cb4sq0skc4ob.ap-south-1.rds.amazonaws.com -u admin -p )
 
-</code></pre>             
+</code></pre>
              `,
              script14:`
 <pre><code>
@@ -674,7 +674,7 @@ aws ec2 describe-regions
 
 echo " ** List of AWS VPC List ** "
 aws ec2 describe-vpcs" format (Ex: aws_service_status.sh)
-   
+
 </code></pre>
 
              `,
@@ -691,7 +691,7 @@ sudo apt-get update
 sudo apt-get install Grafana
 systemctl start grafana-server.service
 
-</code></pre>                 
+</code></pre>
              `,
 
              script16:`
@@ -699,11 +699,11 @@ systemctl start grafana-server.service
 
 
 
-</code></pre>            
+</code></pre>
               `,
                 script17:`
- 
-                
+
+
             `,
 
     };
@@ -724,12 +724,12 @@ systemctl start grafana-server.service
 
 
 
-    
+
     <footer style="background-color: #333; color: #fff; text-align: center; padding: 10px;">
-        
+
         <h4 class="display-4:">Govindarajula LP Sravana Kumar </h4>
             <div>
-            <p>  
+            <p>
             <a href="https://www.facebook.com/glps369" target="_blank" style="color: #4267B2; margin: 0 10px;">
                 <i class="fab fa-facebook-f"></i>
             </a>
@@ -744,11 +744,11 @@ systemctl start grafana-server.service
             </a>
         </div>
     </footer>
-    
-  
-  
-  
-  
+
+
+
+
+
   </footer>
 
 </html>
